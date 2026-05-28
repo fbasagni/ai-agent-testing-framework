@@ -46,7 +46,7 @@ O projeto mostra a qualidade real de modelos generativos e agentes inteligentes.
 
 ## 3. Estrutura do Projeto
 
-```text
+```plaintext
 projeto-qa-ia/
 │
 ├── .github/
@@ -59,8 +59,8 @@ projeto-qa-ia/
 ├── projeto_qa_ia.py              # Script principal com a lógica do Agente e do Juiz de IA
 │
 ├── relatorio_bugs_ia.html        # Relatório Executivo interativo (gerado após falhas)
-└── README.md                     # Documentação técnica do projeto
-
+└── README.md  
+```
 
 ## 4. Matriz de Avaliação (Critérios das Notas)
 
@@ -78,23 +78,29 @@ As asserções de qualidade abandonam o clássico modelo binário "passou/falhou
 
 5.1. Certifique-se de ter o Python 3.11 instalado no sistema.
 5.2. Ative o ambiente virtual e instale a biblioteca oficial do Google GenAI:
-   ```bash
+
+```plaintext
+
    pip install google-genai
 
+```
 
-## 5.3.   Obtenha sua chave de acesso gratuita no Google AI Studio.
+
+5.3.   Obtenha sua chave de acesso gratuita no Google AI Studio.
 
 Configure a chave nas variáveis de ambiente do seu terminal:
 $env:GEMINI_API_KEY="SUA_CHAVE_AQUI"
 
-## 5.4.   Execute a esteira automatizada de testes locais:
+5.4.   Execute a esteira automatizada de testes locais:
+
 python projeto_qa_ia.py
 
 
-## 5.5. Caso ocorram falhas geradas pelos testes de segurança, abra o arquivo relatorio_bugs_ia.html diretamente em seu navegador web para visualizar o Dashboard de logs.
+5.5. Caso ocorram falhas geradas pelos testes de segurança, abra o arquivo relatorio_bugs_ia.html diretamente em seu navegador web para visualizar o Dashboard de logs.
 
 
-6. Integração Contínua (GitHub Actions)
+## 6. Integração Contínua (GitHub Actions)
+
 O arquivo ai_testing.yml gerencia o fluxo de integração automática. Toda vez que uma modificação é enviada via git push ou um Pull Request é aberto, a pipeline realiza os seguintes passos:
 
 Ambiente Virtual: Inicia uma máquina virtual com sistema Linux Ubuntu atualizado e configura a versão correta do Python 3.11.
@@ -105,24 +111,21 @@ Segurança de Credenciais: Recupera com total segurança a variável GEMINI_API_
 
 Execução Automatizada: Executa a bateria de testes. Se o Juiz de IA reprovar o comportamento do agente, a pipeline acusa erro e anexa o relatório HTML interativo como um artefato pronto para download no painel do repositório.
 
-7. Funcionalidades Atendidas (Checklist)
+
+## 7. Funcionalidades Atendidas (Checklist)
+
 [x] Estrutura modular em Python utilizando SDK atualizado (google-genai).
-
 [x] Dataset em formato JSON cobrindo vulnerabilidades do OWASP Top 10 para LLMs.
-
 [x] Agente de IA com regras e restrições rígidas de e-commerce de roupas.
-
 [x] Juiz de IA operando como ferramenta automatizada de LLM-as-a-Judge.
-
 [x] Tratamento de exceções e proteção contra Rate Limiting integrado ao loop.
-
 [x] Exportação de relatório em HTML responsivo e estilizado com CSS embutido.
-
 [x] Script de Workflow configurado para o GitHub Actions.
-
 [x] Proteção das credenciais de acesso por meio de injeção de Secrets.
 
-8. Considerações Finais
+## 8. Considerações Finais
+   
 Este projeto marca a transição de práticas de garantia de qualidade de interfaces estáticas para a validação dinâmica de algoritmos probabilísticos e inteligência artificial generativa.
 
-Além de demonstrar capacidade técnica de codificação, o projeto comprova o domínio prático de Red Teaming, modelagem de dados de teste de comportamento contextual, arquitetura de sistemas de avaliação em lote e esteiras integradas de DevOps/QAOps.
+
+
