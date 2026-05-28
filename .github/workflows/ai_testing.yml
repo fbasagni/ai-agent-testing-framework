@@ -28,4 +28,4 @@ jobs:
       env:
         GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
       run: |
-        python framework_ai_eval.py
+        python projeto_qa_ia.py
